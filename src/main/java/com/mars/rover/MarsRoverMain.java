@@ -34,11 +34,10 @@ public class MarsRoverMain {
 				String moveCommand = bufferedReader.readLine().trim();
 				List<String> moveCommands = CommandParser.parseCommand(moveCommand.toUpperCase());
 				rangeRoverEvoque.processMoveCommands(moveCommands);
-				System.out
-						.println("Location of RangeRoverEvoque : " + rangeRoverEvoque.getLocation().toString() + "\n");
+				System.out.println("Location of RangeRoverEvoque : " + rangeRoverEvoque.getLocation().toString() + "\n");
 			} catch (Exception e) {
 				System.out.println("Exception :" + e.getMessage());
-				System.out.println("Try Again Buy Range Rover Evoque ^^");
+				System.out.println("Try Again to Buy Range Rover Evoque ^^");
 			}
 		}
 	}
