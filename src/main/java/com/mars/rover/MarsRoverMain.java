@@ -25,7 +25,7 @@ public class MarsRoverMain {
 		RangeRoverEvoque rangeRoverEvoque = new RangeRoverEvoque(null);
 		while (true) {
 			try {
-				System.out.print("Rover intial Location [int int String] : ");
+				System.out.print("Rover initial Location [int int String] : ");
 				String locationCommand = bufferedReader.readLine().trim();
 				RoverLocation roverLocation = RoverLocation.parseFromCommand(locationCommand);
 				roverLocation.setGrid(grid);
