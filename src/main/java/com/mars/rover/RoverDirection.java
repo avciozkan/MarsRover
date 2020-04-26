@@ -10,9 +10,9 @@ public class RoverDirection {
 
 	private int yAffect = 0;
 
-	private RoverDirection next = null;
+	private RoverDirection right = null;
 
-	private RoverDirection previous = null;
+	private RoverDirection left = null;
 
 	public static RoverDirection N = new RoverDirection("N", 0, 1);
 	public static RoverDirection E = new RoverDirection("E", 1, 0);
@@ -22,14 +22,17 @@ public class RoverDirection {
 	private static HashMap<String, RoverDirection> directionsMap = new HashMap<String, RoverDirection>();
 
 	/*
-	 * next => Turn Right previous => Turn Left
+	 * setRight() => Turn Right 
+	 * setLeft()  => Turn Left
+	 * 
+	 * 
+	 * Right and left definitions for N, E, S and W 
 	 */
-
 	static {
-		N.setNext(E);
-		E.setNext(S);
-		S.setNext(W);
-		W.setNext(N);
+		N.setRight(E);
+		E.setRight(S);
+		S.setRight(W);
+		W.setRight(N);
 		directionsMap.put(N.getLabel(), N);
 		directionsMap.put(E.getLabel(), E);
 		directionsMap.put(S.getLabel(), S);
@@ -42,6 +45,9 @@ public class RoverDirection {
 		this.yAffect = yAffect;
 	}
 
+	/*
+	 * Find direction
+	 */
 	public static RoverDirection getDirectionFromDirectionString(String directionString)
 			throws IllegalArgumentException {
 		RoverDirection direction = directionsMap.get(directionString.toUpperCase());
@@ -51,21 +57,21 @@ public class RoverDirection {
 		return direction;
 	}
 
-	public RoverDirection getNext() {
-		return next;
+	public RoverDirection getRight() {
+		return right;
 	}
 
-	public void setNext(RoverDirection next) {
-		this.next = next;
-		this.next.setPrevious(this);
+	public void setRight(RoverDirection right) {
+		this.right = right;
+		this.right.setLeft(this);
 	}
 
-	public RoverDirection getPrevious() {
-		return previous;
+	public RoverDirection getLeft() {
+		return left;
 	}
 
-	public void setPrevious(RoverDirection previous) {
-		this.previous = previous;
+	public void setLeft(RoverDirection left) {
+		this.left = left;
 	}
 
 	public String getLabel() {

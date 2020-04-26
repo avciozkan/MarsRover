@@ -36,7 +36,7 @@ public class MarsRoverMain {
 				rangeRoverEvoque.processMoveCommands(moveCommands);
 				System.out.println("Location of RangeRoverEvoque : " + rangeRoverEvoque.getLocation().toString() + "\n");
 			} catch (Exception e) {
-				System.out.println("Exception :" + e.getMessage());
+				System.out.println("Exception : " + e.getMessage());
 				System.out.println("Try Again to Buy Range Rover Evoque ^^");
 			}
 		}

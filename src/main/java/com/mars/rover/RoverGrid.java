@@ -16,7 +16,9 @@ public class RoverGrid {
 	public int getyGrid() {
 		return yGrid;
 	}
-
+	/*
+	 *  Initialize Grid Size
+	 */
 	public static RoverGrid parseFromCommand(String command) throws IllegalArgumentException {
 		String[] size = command.split(" ");
 		try {

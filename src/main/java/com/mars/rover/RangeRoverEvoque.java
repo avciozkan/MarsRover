@@ -16,11 +16,11 @@ public class RangeRoverEvoque {
 	}
 
 	private void proccessCommand(String command) {
-		if (command.toUpperCase().equals("L")) {
+		if (command.equals("L")) {
 			location.turnLeft();
-		} else if (command.toUpperCase().equals("R")) {
+		} else if (command.equals("R")) {
 			location.turnRight();
-		} else if (command.toUpperCase().equals("M")) {
+		} else if (command.equals("M")) {
 			location.move();
 		} else {
 			System.out.println("Illegal move command : " + command);

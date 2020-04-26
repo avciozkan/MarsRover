@@ -22,23 +22,25 @@ public class RoverLocation {
 		this.grid = grid;
 	}
 
-	// guarentine inside
+	/* 
+	 *  Ensuring that the x and y points remain in the grid (Outside and inside control)
+	 */
 	public void move() {
 		x += direction.getxAffect();
-		x = Math.min(x, grid.getxGrid());
-		x = Math.max(0, x);
+		x = Math.min(x, grid.getxGrid()); // Ensuring that x point is not greater than gridXPoint
+		x = Math.max(0, x); // Ensuring that x point is not less than zero
 
-		y += direction.getyAffect();
-		y = Math.min(y, grid.getyGrid());
-		y = Math.max(0, y);
+		y += direction.getyAffect(); 
+		y = Math.min(y, grid.getyGrid()); // Ensuring that y point is not greater than gridYPoint
+		y = Math.max(0, y); // Ensuring that y point is not less than zero
 	}
 
 	public void turnRight() {
-		direction = direction.getNext();
+		direction = direction.getRight();
 	}
 
 	public void turnLeft() {
-		direction = direction.getPrevious();
+		direction = direction.getLeft();
 	}
 
 	public int getX() {

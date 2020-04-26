@@ -26,7 +26,6 @@ public class MarsRoverTest {
 		String commands = "MMRMMRMRRM";
 		RangeRoverEvoque evoque = new RangeRoverEvoque(location);
 		evoque.processMoveCommands(CommandParser.parseCommand(commands));
-
 		assertEquals("5 1 E", evoque.getLocation().toString());
 	}
 

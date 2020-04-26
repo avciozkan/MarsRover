@@ -6,6 +6,7 @@
 	<artifactId>MarsRover</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MarsRover</name>
+	<packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
@@ -15,4 +16,9 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
+	<build>
+		<finalName>MarsRover</finalName>
+	</build>
+	
 </project>
