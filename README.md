@@ -32,8 +32,8 @@ When the program is run, it requires some input parameters.
 These;
 
 1. Grid Size
-2. Rover Initial Location (Example : 4 2 E)
-3. Rover Move Commands (Example : LRMLMRMLMM)
+2. Rover Initial Location
+3. Rover Move Commands
 
 When the program first starts, the text below appears
 
@@ -47,7 +47,7 @@ Then, the text below appears
 
 `Rover initial Location [int int String] : `
 
-Then, you are asked to enter the location information with 2 int and 1 string value and a space. For example;
+Then, you are asked to enter the location information with 2 int and 1 string value. For example;
 
 `Rover initial Location [int int String] : 3 2 N`
 
@@ -55,7 +55,7 @@ Then, the text below appears
 
 `Rover move commands [String...] : `
 
-Here you will be prompted for a script containing the letters L, M and R. For example;
+Here you will be prompted for a command the letters L, M and R. For example;
 
 `Rover move commands [String...] : LMMRMRRMLM`
 
